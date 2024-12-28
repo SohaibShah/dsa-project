@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 "use client"
 import { LatLngExpression } from 'leaflet'
 import L from 'leaflet';
 import React, { useEffect } from 'react'
-import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
+import { MapContainer, Marker, TileLayer, useMap } from 'react-leaflet'
 
 import 'leaflet/dist/leaflet.css';
 
@@ -34,7 +35,7 @@ const Map: React.FC<MapProps> = ({ position, zoom }) => {
     }
     return (
         <div className="h-full w-full">
-            <MapContainer center={position} zoom={zoom} scrollWheelZoom={false} style={{ height: '100%', width: '100%', borderRadius: '0.75rem'}}>
+            <MapContainer center={position} zoom={zoom} scrollWheelZoom={false} style={{ height: '100%', width: '100%', borderRadius: '0.75 rem'}}>
                 <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 <Marker position={position} riseOnHover={true}>
                 </Marker>
